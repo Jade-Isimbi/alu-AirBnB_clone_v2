@@ -12,9 +12,9 @@ app = Flask(__name__)
 
 @app.route('/cities_by_states', strict_slashes=False)
 def cities_route():
-    """Comment"""
-   states = storage.all(State)
-   return render_template('8-cities_by_states.html', states=states)
+    """Displays a html page with states and cities"""
+    states = storage.all(State)
+    return render_template('8-cities_by_states.html', states=states)
 
 
 @app.teardown_appcontext
